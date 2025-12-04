@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Threat Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>GLOBAL THREAT MONITOR // <span class="status">LIVE</span></h1>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="label">ATTACKS/SEC</span>
+                    <span class="value" id="attacks-sec">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">TOP TARGET</span>
+                    <span class="value" id="top-target">---</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">TOTAL EVENTS</span>
+                    <span class="value" id="total-events">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main id="globeViz">
+            <!-- Globe will be injected here -->
+        </main>
+
+        <aside class="log-panel">
+            <h2>LIVE FEED</h2>
+            <div class="log-entries" id="log-entries">
+                <!-- Logs will be injected here -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Dependencies -->
+    <script src="https://unpkg.com/three"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
